@@ -9,7 +9,7 @@ import-module microsoft.graph
      Created on:    30th July 2023
      Created by:    Tom MACHADO
      Organization:  Synapsys IT
-     Filename:      Get-IntuneReports.ps1 ## to edit
+     Filename:     
     ===========================================================================
     .DESCRIPTION
 
@@ -107,7 +107,7 @@ foreach ($singledomain in $uniquedomains) {
     "mailNickname": "KerberosTokenSkynoteMac",
     "securityEnabled": true,
     "owners@odata.bind": [
-      "https://graph.microsoft.com/v1.0/users/21506325-c19d-4670-9c3e-fddd3c87665d"
+      "https://graph.microsoft.com/v1.0/users/insertadminid"
     ],
   }
 "@
@@ -258,9 +258,9 @@ foreach ($singledomain in $uniquedomains) {
 
 
 
-    ##### ajouter chaque groupe dans remove nomad group id = f72016eb-8d89-4c5f-a2e0-dd069395030a : 
+    ##### ajouter chaque groupe dans remove nomad group id = XXXXXX : 
     #this is the Remove Nomad Group id so Nomad is removed for the onboarded user. An Intune conf and shell script are targeted on this group
-    $uri='https://graph.microsoft.com/v1.0/groups/f72016eb-8d89-4c5f-a2e0-dd069395030a/members/$ref'
+    $uri='https://graph.microsoft.com/v1.0/groups/XXXXXXXXXXX/members/$ref'
 
     $json = @"      
 
